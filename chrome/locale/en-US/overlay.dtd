@@ -1,0 +1,4 @@
+<!ENTITY smv.label "Simple Markup Validator">
+<!ENTITY smvContext.accesskey "Y">
+<!ENTITY smvToolbarButton.label "Validate">
+<!ENTITY smvToolbarButton.title "Validate this page">

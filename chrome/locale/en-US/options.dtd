@@ -1,0 +1,9 @@
+<!ENTITY prefwindow.title "Simple Markup Validator preferences">
+<!ENTITY pane1.title "Simple Markup Validator preferences">
+
+<!ENTITY showoutlinepref.label "Show outline">
+<!ENTITY showoutlinepref.accesskey "O">
+<!ENTITY showparsetreepref.label "Show parse tree">
+<!ENTITY showparsetreepref.accesskey "P">
+<!ENTITY showsourcepref.label "Show source">
+<!ENTITY showsourcepref.accesskey "S">

@@ -1,0 +1,7 @@
+#smv-toolbar-button {
+  list-style-image: url("chrome://smv/skin/toolbar-button.png");
+  -moz-image-region: rect(0 24px 24px 0);
+}
+[iconsize="small"] #smv-toolbar-button {
+  -moz-image-region: rect(0 40px 16px 24px);
+}

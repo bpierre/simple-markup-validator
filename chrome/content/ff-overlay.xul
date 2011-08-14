@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://smv/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://smv/locale/overlay.dtd">
+<overlay id="smv-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript" src="chrome://smv/content/html.js"/>
+	<script type="application/x-javascript" src="chrome://smv/content/overlay.js"/>
+	<script type="application/x-javascript" src="chrome://smv/content/ff-overlay.js"/>
+
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="smv-strings" src="chrome://smv/locale/overlay.properties"/>
+	</stringbundleset>
+
+	<menupopup id="menu_ToolsPopup">
+		<menuitem id="smv-hello" label="&smv.label;"
+			oncommand="smv.onMenuItemCommand(event);"/>
+	</menupopup>
+
+	<toolbarpalette id="BrowserToolbarPalette">
+	<toolbarbutton id="smv-toolbar-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+		label="&smvToolbarButton.label;" tooltiptext="&smvToolbarButton.title;"
+		oncommand="smv.onToolbarButtonCommand()"/>
+	</toolbarpalette>
+
+</overlay>
