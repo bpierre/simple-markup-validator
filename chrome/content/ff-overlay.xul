@@ -4,14 +4,13 @@
 <overlay id="smv-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	<script type="application/x-javascript" src="chrome://smv/content/html.js"/>
 	<script type="application/x-javascript" src="chrome://smv/content/overlay.js"/>
-	<script type="application/x-javascript" src="chrome://smv/content/ff-overlay.js"/>
 
 	<stringbundleset id="stringbundleset">
 		<stringbundle id="smv-strings" src="chrome://smv/locale/overlay.properties"/>
 	</stringbundleset>
 
 	<menupopup id="menu_ToolsPopup">
-		<menuitem id="smv-hello" label="&smv.label;"
+		<menuitem id="smv-menuitem" label="&smv.label;"
 			oncommand="smv.onMenuItemCommand(event);"/>
 	</menupopup>
 

@@ -17,8 +17,10 @@ along with Web Developer.  If not, see <http://www.gnu.org/licenses/>.
 
 /*global  window, Components, XMLHttpRequest, getBrowser, getWebNavigation */
 
+(function() {
+
 // Returns the document body element
-function webdeveloper_getDocumentBodyElement(contentDocument)
+webdeveloper_getDocumentBodyElement = function(contentDocument)
 {
     // If there is a body element
     if(contentDocument.body)
@@ -56,13 +58,14 @@ function webdeveloper_generateDocument(url)
 }
 
 // Constructs a validate HTML object
-function WebDeveloperValidateHTML(prefs)
+function WebDeveloperValidateHTML(prefs, validateMessage)
 {
     this.file              = null;
     this.fileElement       = null;
     this.formElement       = null;
     this.validationRequest = null;
     this.prefs = prefs;
+    this.validateMessage = validateMessage;
 }
 
 // Cleans up
@@ -183,7 +186,7 @@ WebDeveloperValidateHTML.prototype.validateHTML = function(uri)
     var generatedDocument = webdeveloper_generateDocument("");
     var bodyElement       = webdeveloper_getDocumentBodyElement(generatedDocument);
     var inputElement      = null;
-    var titleStr = 'Validate HTML\u2026';
+    var titleStr = this.validateMessage;
     var titleElement = generatedDocument.createElement("h1");
     
     generatedDocument.title = titleElement.innerHTML = titleStr;
@@ -278,3 +281,8 @@ WebDeveloperValidateHTML.prototype.onLocationChange = function(webProgress, requ
 WebDeveloperValidateHTML.prototype.onProgressChange = function(webProgress, request, currentSelfProgress, maximumSelfProgress, currentTotalProgress, maximumTotalProgress) {};
 WebDeveloperValidateHTML.prototype.onSecurityChange = function(webProgress, request, state) {};
 WebDeveloperValidateHTML.prototype.onStatusChange   = function(webProgress, request, status, message) {};
+
+// Export WebDeveloperValidateHTML
+window.SmvWebDeveloperValidateHTML = WebDeveloperValidateHTML;
+
+})();

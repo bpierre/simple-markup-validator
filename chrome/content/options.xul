@@ -7,9 +7,11 @@
       <preference id="showOutline" name="extensions.smv.showOutline" type="bool"/>
       <preference id="showParseTree" name="extensions.smv.showParseTree" type="bool"/>
       <preference id="showSource" name="extensions.smv.showSource" type="bool"/>
+      <preference id="showInTools" name="extensions.smv.showInTools" type="bool"/>
     </preferences>
     <checkbox id="showOutline" preference="showOutline" label="&showoutlinepref.label;" accesskey="&showoutlinepref.accesskey;"/>
     <checkbox id="showParseTree" preference="showParseTree" label="&showparsetreepref.label;" accesskey="&showparsetreepref.accesskey;"/>
     <checkbox id="showSource" preference="showSource" label="&showsourcepref.label;" accesskey="&showsourcepref.accesskey;"/>
+    <checkbox id="showInTools" preference="showInTools" label="&showintoolspref.label;" accesskey="&showintoolspref.accesskey;"/>
   </prefpane>
 </prefwindow>

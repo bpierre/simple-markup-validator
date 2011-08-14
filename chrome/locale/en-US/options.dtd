@@ -7,3 +7,6 @@
 <!ENTITY showparsetreepref.accesskey "P">
 <!ENTITY showsourcepref.label "Show source">
 <!ENTITY showsourcepref.accesskey "S">
+
+<!ENTITY showintoolspref.label "Show Simple Markup Validator in the Tools menu">
+<!ENTITY showintoolspref.accesskey "T">
