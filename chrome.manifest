@@ -1,6 +1,8 @@
 content   smv                 chrome/content/
 skin      smv   classic/1.0   chrome/skin/
-locale    smv   en-US         chrome/locale/en-US/
 
 overlay   chrome://browser/content/browser.xul   chrome://smv/content/ff-overlay.xul
 style chrome://global/content/customizeToolbar.xul chrome://smv/skin/overlay.css
+
+locale    smv   en-US         chrome/locale/en-US/
+locale    smv   sv-SE         chrome/locale/sv-SE/

@@ -1,0 +1,12 @@
+<!ENTITY prefwindow.title "Inställningar för Simple Markup Validator">
+<!ENTITY pane1.title "Inställningar för Simple Markup Validator">
+
+<!ENTITY showoutlinepref.label "Visa disposition">
+<!ENTITY showoutlinepref.accesskey "d">
+<!ENTITY showparsetreepref.label "Visa tolkningsträd">
+<!ENTITY showparsetreepref.accesskey "t">
+<!ENTITY showsourcepref.label "Visa källkod">
+<!ENTITY showsourcepref.accesskey "k">
+
+<!ENTITY showintoolspref.label "Visa &quot;Simple Markup Validator&quot; i Verktyg-menyn">
+<!ENTITY showintoolspref.accesskey "V">
