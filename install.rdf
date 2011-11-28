@@ -4,7 +4,7 @@
 		<em:id>simple-markup-validator@pierrebertet.net</em:id>
 		<em:type>2</em:type>
 		<em:name>Simple Markup Validator</em:name>
-		<em:version>0.1</em:version>
+		<em:version>0.2</em:version>
 		<em:creator>Pierre Bertet</em:creator>
 		<em:translator>Mikael Hiort af Ornäs (sv-SE)</em:translator>
 		<em:optionsURL>chrome://smv/content/options.xul</em:optionsURL>
