@@ -97,34 +97,12 @@ WebDeveloperValidateHTML.prototype.cleanUp = function()
 // Creates a source file
 WebDeveloperValidateHTML.prototype.createSourceFile = function(uri)
 {
-    var temporaryDirectory = Components.classes["@mozilla.org/file/directory_service;1"].getService(Components.interfaces.nsIProperties).get("TmpD", Components.interfaces.nsIFile);
-
-    // If the temporary directory exists, is a directory and is writable
-    if(temporaryDirectory.exists() && temporaryDirectory.isDirectory() && temporaryDirectory.isWritable())
-    {
-        var fileName   = "";
-        var sourceFile = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
-
-        // Try to get the host
-        try
-        {
-            fileName = uri.host;
-        }
-        catch(exception)
-        {
-            // Do nothing
-        }
-
-        temporaryDirectory.append("smv-" + fileName + "-" + new Date().getTime() + ".html");
-        sourceFile.initWithPath(temporaryDirectory.path);
-
-        return sourceFile;
-    }
-    else
-    {
-        // Error
-        return null;
-    }
+    var file = Components.classes["@mozilla.org/file/directory_service;1"].
+               getService(Components.interfaces.nsIProperties).
+               get("TmpD", Components.interfaces.nsIFile);
+    file.append((uri.host || 'smv') + "-" + new Date().getTime() + ".html");
+    file.createUnique(Components.interfaces.nsIFile.NORMAL_FILE_TYPE, 0666);
+    return file;
 };
 
 // Returns the post data
@@ -188,10 +166,10 @@ WebDeveloperValidateHTML.prototype.validateHTML = function(uri)
     var inputElement      = null;
     var titleStr = this.validateMessage;
     var titleElement = generatedDocument.createElement("h1");
-    
-    generatedDocument.title = titleElement.innerHTML = titleStr;
+
+    generatedDocument.title = titleElement.textContent = titleStr;
     bodyElement.appendChild(titleElement);
-    
+
     this.file               = this.createSourceFile(uri);
     this.formElement        = generatedDocument.createElement("form");
 

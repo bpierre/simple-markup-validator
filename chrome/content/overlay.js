@@ -6,16 +6,14 @@ var smv = {
     this.prefs = Components.classes["@mozilla.org/preferences-service;1"]
                                        .getService(Components.interfaces.nsIPrefService)
                                        .getBranch("extensions.smv.");
-    
+
     this.prefs.QueryInterface(Components.interfaces.nsIPrefBranch2);
     this.prefs.addObserver("", smv.prefObserver, false);
-    
+
     smv.updateMenuItem();
   },
 
   updateMenuItem: function() {
-    Firebug.Console.log(document.getElementById("menu_ToolsPopup"));
-    Firebug.Console.log(this.prefs.getBoolPref("showInTools"));
     document.getElementById("smv-menuitem").hidden = !(this.prefs.getBoolPref("showInTools"));
   },
 
